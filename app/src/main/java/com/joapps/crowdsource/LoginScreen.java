@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class LoginScreen extends AppCompatActivity {
 
-    public Button but1;
+    private Button but1;
     public void init(){
 
         but1=(Button)findViewById(R.id.but1);
