@@ -23,8 +23,7 @@
         <activity
             android:name=".ProjectInfo"
             android:label="@string/title_activity_project_info"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
