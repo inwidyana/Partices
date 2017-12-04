@@ -117,4 +117,11 @@ public class ThreadFeed extends AppCompatActivity {
             return 3;
         }
     }
+    public void onClick(View v){
+
+        startActivity(new Intent(this,ProjectInfo.class));
+    }
+
+
+
 }
