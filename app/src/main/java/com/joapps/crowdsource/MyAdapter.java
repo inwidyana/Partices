@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[] mDataset;
+    private TextView viewHolderTextView1;
+    private TextView viewHolderTextView2;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mTextView;
@@ -28,16 +30,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.my_text_view, parent, false);
+                .inflate(R.layout.viewholder, parent, false);
 
         ViewHolder vh = new ViewHolder(v);
+        viewHolderTextView1 = (TextView) parent.findViewById(R.id.viewholder_textview1);
+        viewHolderTextView2 = (TextView) parent.findViewById(R.id.viewholder_textview2);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.mTextView.setText(mDataset[position]);
-
+        viewHolderTextView1.setText(mDataset[position]);
+        viewHolderTextView2.setText(mDataset[position]);
     }
 
     @Override
